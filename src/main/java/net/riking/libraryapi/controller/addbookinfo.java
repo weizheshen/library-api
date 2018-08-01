@@ -22,7 +22,7 @@ import net.sf.json.JSONObject;
 public class addbookinfo {
 	
 	@RequestMapping("/addbookinfo")
-	public static Integer addbookinfo(@RequestParam String code) {  
+	public static Integer addbookinfo(@RequestParam String code) {   
 
 		int i=0;
         String Publish = null;
