@@ -42,6 +42,8 @@ public class detail {
 			i=3;
 		}else if(flag.equals("已申请还书")){
 			i=4;
+		}else if(flag.equals("审核不通过")) {
+			i=5;
 		}else{
 			i=0;
 		}
