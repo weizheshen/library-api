@@ -20,7 +20,7 @@ public class adduserinfo {
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();//加载配置
 		Session session=factory.openSession();   //创建会话
 		Transaction tx=session.beginTransaction();
-		
+		 
 		try {
 			Query query = session.createQuery("from User where code = ?");
 			query.setParameter(0, openid);
