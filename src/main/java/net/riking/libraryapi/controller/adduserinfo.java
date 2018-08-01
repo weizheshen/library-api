@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import net.riking.libraryapi.entity.User;
 
 @RestController 
-public class adduserinfo {
+public class adduserinfo { 
 	@RequestMapping("/adduserinfo")
 	public static Integer addinfo(@RequestParam String username,@RequestParam String tel,@RequestParam String number,@RequestParam String place,@RequestParam String logincode){
 		Integer i=0;
