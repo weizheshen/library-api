@@ -24,7 +24,7 @@ public class borrowbookbysearch {
 		Session session=factory.openSession();   //创建会话
 		Transaction tx=session.beginTransaction();
 		String name=null;
-		Integer stock = 0;
+		Integer stock = 0;   
 		try {
 			Query query = session.createQuery("from User where code = ?");
 			query.setParameter(0, openid);
