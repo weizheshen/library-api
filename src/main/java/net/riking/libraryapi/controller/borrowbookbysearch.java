@@ -41,7 +41,22 @@ public class borrowbookbysearch {
 			query.setParameter(0, code);
 			Book book = (Book) query.uniqueResult();
 			stock = book.getStock();
-			if(stock>0){
+			if(stock == 1) {
+				stock--;
+				String bookname = book.getBooktitle();
+				String picture = book.getPicture();
+				String bookcode = book.getCode();
+				Record record = new Record();
+				record.setPicture(picture);
+				record.setBookname(bookname);
+				record.setUsername(name);
+				record.setBookcode(bookcode);
+				record.setFlag("审核中");	
+				record.setUseropenid(openid);
+				book.setStock(stock);
+				session.save(record);
+				i=2;
+			}else if(stock>1){
 			stock--;
 			String bookname = book.getBooktitle();
 			String picture = book.getPicture();
