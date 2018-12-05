@@ -86,7 +86,7 @@ public class backapplication {
 			Record record = new Record();
 			record.setId(id);
 			session.delete(record);
-	
+	  
 
 		} catch (Exception e) {
 			// TODO: handle exception
